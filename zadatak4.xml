@@ -1,0 +1,14 @@
+<osoba spol="M">
+    <ime>Marko</ime>
+    <prezime>Maric</prezime>
+    <mjestoStanovanja>
+        <adresa>Getaldiceva 4</adresa>
+        <grad>Zagreb</grad>
+        <drzava>Hrvatska</drzava>
+    </mjestoStanovanja>
+    <kontakt>
+        <mobitel>0929198312</mobitel>
+        <kucniTelefon>3230894292</kucniTelefon>
+        <email>markomaric@gmail.com</email>
+    </kontakt>
+</osoba>
