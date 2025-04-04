@@ -1,0 +1,14 @@
+<narudzba>
+    <ime>Mateo</ime>
+    <prezime>Corkovic</prezime>
+    <mjestoStanovanja>
+        <adresa>Radnicka 12</adresa>
+        <grad>Zagreb</grad>
+        <drzava>Hrvatska</drzava>
+    </mjestoStanovanja>
+    <naruceniArtikl>
+        <naziv>Jakna</naziv>
+        <kolicina>1</kolicina>
+        <cijena>150</cijena>
+    </naruceniArtikl>
+</narudzba>
