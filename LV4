@@ -108,22 +108,40 @@
 <!-- Uvod u XML programiranje XPath-->
 <!--
 Zadaci rješenja
-1. /Studenti/Student/Ime
-2. /Studenti/Student/Predmet/Naslov
-3. /Studenti/Student/Predmet/Naslov
-4. /Studenti/Student[2]/Predmet/Vjezbe/Vjezba[text()="NE"]
-5. sum(/Studenti/Student/Predmet/Kolokviji/Kolokvij)
-6. /Studenti/Student[last()]/Prezime
-7. /Studenti/Student[3]/contains(Ime,"a")
-8. concat(/Studenti/Student[2]/Ime," ",/Studenti/Student[4]/Prezime)
-9. 2025 - /Studenti/Student[@RedniBroj = 3]/GodinaRodjenja
-10. boolean(/Studenti/Student/Predmet/Kolokviji/Kolokvij[text()="5"])
-11. string-length(concat(/Studenti/Student[4]/Prezime,/Studenti/Student[2]/Ime))
-12. count(/Studenti/Student[@RedniBroj="2"]/Predmet/Vjezbe/Vjezba[text()="NE"])
-13. boolean(/Studenti/Student/Predmet/Kolokviji/Kolokvij[2][text()="0"])
-14. /Studenti/Student[Grupa="A"]/Ime
-15. /Studenti/Student[not(Predmet/Vjezbe/Vjezba="NE")]/Ime
-16. /Studenti/Student[Predmet/Vjezbe/Vjezba="NE"]/Ime
-17. /Studenti/Student/Predmet/Kolokviji/Kolokvij[text()<3]/@Sifra
-18. /Studenti/Student[contains(Prezime,"ć")]/Ime
+1. Ispiši imena svih studenata.
+/Studenti/Student/Ime
+2. Ispiši naslove svih predmeta koji slušaju studenti.
+/Studenti/Student/Predmet/Naslov
+3. Dohvati četvrtu vježbu trećeg studenta.
+/Studenti/Student[3]/Predmet/Vjezbe/Vjezba[4]
+4. Ispiši sve vježbe drugog studenta koje nije pohađao(vrijednost = "NE")
+/Studenti/Student[2]/Predmet/Vjezbe/Vjezba[text()="NE"]
+5. Zbroji sve bodove sa kolokvija svih studenata.
+sum(/Studenti/Student/Predmet/Kolokviji/Kolokvij)
+6. Ispiši prezime posljednjeg studenta u dokumentu.
+/Studenti/Student[last()]/Prezime
+7. Provjeri sadrži li ime trećeg studenta slovo "a".
+/Studenti/Student[3]/contains(Ime,"a")
+8. Spoji ime drugog i prezime četvrtog studenta u jedan tekst.
+concat(/Studenti/Student[2]/Ime," ",/Studenti/Student[4]/Prezime)
+9. Izračunaj broj godina studenta s RedniBroj = 3 (pretpostavi da je trenutna godina 2025).
+2025 - /Studenti/Student[@RedniBroj = 3]/GodinaRodjenja
+10. Provjeri postoji li student koji ima 5 bodova na nekom kolokviju.
+boolean(/Studenti/Student/Predmet/Kolokviji/Kolokvij[text()="5"])
+11. Ispisi ukupnu duljinu prezimena četvrtog i imena drugog student zajedno.
+string-length(concat(/Studenti/Student[4]/Prezime,/Studenti/Student[2]/Ime))
+12. Prebroj vježbe koje student s RedniBroj = 2 nije pohadao.
+count(/Studenti/Student[@RedniBroj="2"]/Predmet/Vjezbe/Vjezba[text()="NE"])
+13. Provjeri postoji li student koji ima 0 bodova na drugom kolokviju.
+boolean(/Studenti/Student/Predmet/Kolokviji/Kolokvij[2][text()="0"])
+14. Ispisi imena svih studenata koji su u grupi A.
+/Studenti/Student[Grupa="A"]/Ime
+15. Ispisi studente koji su položi sve vježbe (vrijednost svake vježbe = "DA").
+/Studenti/Student[not(Predmet/Vjezbe/Vjezba="NE")]/Ime
+16. Pronađi studente koji imaju barem jednu vježbu s vrijednošću "NE".
+/Studenti/Student[Predmet/Vjezbe/Vjezba="NE"]/Ime
+17.  Ispisi sve kolokvije čiji je broj bodova manji od 3.
+/Studenti/Student/Predmet/Kolokviji/Kolokvij[text()<3]/@Sifra
+18. Ispiši imena studenata čije prezime sadrži slovo "ć".
+/Studenti/Student[contains(Prezime,"ć")]/Ime
 -->
